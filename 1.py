@@ -18,7 +18,7 @@ while t > 0:
     set_of_states = []
     set_of_rewards = []
 
-    cur_state = 1
+    cur_state = 0
     # set_of_states.append(cur_state)
     # prev_state = 0
     while total > 0:
