@@ -19,7 +19,7 @@ while t > 0:
     set_of_states = []
     set_of_rewards = []
 
-    cur_state = 1
+    cur_state = 0
     # set_of_states.append(cur_state)
     # prev_state = 0
     while total > 0:
@@ -50,12 +50,12 @@ while t > 0:
                 set_of_rewards.append(R['s1s0'])
                 set_of_states.append(cur_state)
         total -= 1
-    new_set_of_rewards.append(set_of_rewards)
-    if t % 2 == 0:
-        new_set_of_rewards_each2.append(set_of_rewards)
+    new_set_of_rewards.append(np.sum(set_of_rewards))
     t -= 1
+# print(len(new_set_of_rewards))
 print(new_set_of_rewards)
-print(new_set_of_rewards_each2)
+print(np.sum(new_set_of_rewards)/len(new_set_of_rewards))
+# print(new_set_of_rewards_each2)
 # print(np.sum(new_set_of_rewards)/t_1)
 
 # print(set_of_states)
